@@ -26,8 +26,8 @@ const CardHeader = (props) => {
       className={`card-header p-3 d-flex align-items-center justify-content-between ${props.color}`}
     >
       <div className="card-header-title">
-        <h5 style={{ padding: 0, margin: 0 }}>{props.toolName}</h5>
-        <p>{props.toolDesc}</p>
+        <h5 style={{ padding: 0, margin: 0 }}>{props.serviceName}</h5>
+        <p>{props.serviceDesc}</p>
       </div>
       <motion.div
         whileHover={{ scale: 1.1 }}

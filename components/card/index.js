@@ -12,16 +12,16 @@ import CardHeader from "./card-header/card-header";
 import CardDownload from "./card-download/card-download";
 import CardTime from "./card-time/card-time";
 
-import tools from "../../data";
+import services from "../../data";
 
 const Card = () => {
   return (
     <Row xs={1} sm={1} md={2} lg={2} xl={3}>
-      {tools.map((tool) => {
+      {services.map((service) => {
         const {
-          toolId,
-          toolName,
-          toolDesc,
+          serviceId,
+          serviceName,
+          serviceDesc,
           isCompleted,
           startTime,
           endTime,
@@ -29,9 +29,9 @@ const Card = () => {
           image,
           jobStatus,
           completion,
-        } = tool;
+        } = service;
         return (
-          <Col key={toolId} className="mb-4">
+          <Col key={serviceId} className="mb-4">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -42,13 +42,13 @@ const Card = () => {
             >
               <CardHeader
                 color={color}
-                toolName={toolName}
-                toolDesc={toolDesc}
+                serviceName={serviceName}
+                serviceDesc={serviceDesc}
                 jobStatus={jobStatus}
               />
 
               <div className="card-content d-flex flex-column justify-content-between p-0">
-                <Tab.Container id={toolId} defaultActiveKey="first">
+                <Tab.Container id={serviceId} defaultActiveKey="first">
                   <div className="card-buttons d-flex align-items-center justify-content-around">
                     <div className="d-flex justify-content-center align-items-center card-button-icon">
                       <Nav.Link eventKey="first">
