@@ -1,7 +1,6 @@
 import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { FaUserAlt } from "react-icons/fa";
-import  logoVelo  from "./../../images/logo-velo.svg";
 import "./styles.scss";
 
 function Header() {

@@ -8,7 +8,7 @@ import services from "../../data";
 
 const Card = () => {
   return (
-    <Row xs={1} sm={1} md={2} lg={2} xl={3}>
+    <Row>
       {services.map((service) => {
         const {
           serviceId,
@@ -23,7 +23,7 @@ const Card = () => {
           completion,
         } = service;
         return (
-          <Col key={serviceId} className="mb-4">
+          <Col key={serviceId} className="col-md-12 mb-4">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -39,11 +39,7 @@ const Card = () => {
                 jobStatus={jobStatus}
               />
 
-              <div className="card-body">
-
-
-
-              </div>
+              <div className="card-body"></div>
               <CardFooter></CardFooter>
             </motion.div>
           </Col>
