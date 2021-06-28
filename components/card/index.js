@@ -27,7 +27,7 @@ const Card = () => {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              whileHover={{ scale: 1.02 }}
+              whileHover={{ scale: 1.01 }}
               whileTap={{ scale: 1 }}
               transition={{ duration: 0.15 }}
               className="card"

@@ -1,20 +1,10 @@
 @import "./../../styles/variables.scss";
 
-
-
-
-
 nav.navbar {
   height: $navbar-height;
   .container {
     height: $navbar-height;
     a.navbar-brand {
-      .logo-block {
-        height: $logo-block-height;
-        img {
-          height: $logo-block-height;
-        }
-      }
     }
     a.nav-link {
       font-weight: 300;
@@ -29,9 +19,6 @@ nav.navbar {
   background: transparentize($color-base, 0.3);
   .container {
     a.navbar-brand {
-      div.assure {
-        color: $color-contrast;
-      }
     }
     a.nav-link {
       opacity: 0.6;
@@ -43,17 +30,17 @@ nav.navbar {
   }
 }
 
-// nav.navbar {
-//   background: gold;
-//   .container {
-//     background: red;
-//     a.navbar-brand {
-//       span {
-//         font-size: 1.3em;
-//         color: $color-contrast;
-//       }
-//     }
-//     .nav-item {
-//     }
-//   }
-// }
+nav.navbar {
+  background: gold;
+  .container {
+    background: red;
+    a.navbar-brand {
+      span {
+        font-size: 1.3em;
+        color: $color-contrast;
+      }
+    }
+    .nav-item {
+    }
+  }
+}
