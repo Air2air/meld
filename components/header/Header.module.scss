@@ -17,17 +17,7 @@ nav.navbar {
 
 nav.navbar {
   background: transparentize($color-base, 0.3);
-  .container {
-    a.navbar-brand {
-    }
-    a.nav-link {
-      opacity: 0.6;
-      transition: all 0.1s;
-      &:hover {
-        opacity: 1;
-      }
-    }
-  }
+
 }
 
 nav.navbar {

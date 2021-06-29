@@ -1,7 +1,7 @@
 module.exports = [
 {
   serviceId:1,
-  name:"Asset Management"
+  name:"Asset Allocation"
  },
  {
   serviceId:2,
@@ -13,7 +13,11 @@ module.exports = [
  },
  {
   serviceId:4,
-  name:"Financial Planning"
+  name:"Opportunities"
+ },
+ {
+  serviceId:4,
+  name:"Tax"
  },
 ]
 
