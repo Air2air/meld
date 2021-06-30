@@ -1,124 +1,68 @@
-// yarn add @nivo/core @nivo/pie
+import React from "react";
 import { ResponsivePie } from "@nivo/pie";
-import {data} from "./data-1"
-// make sure parent container have a defined height when using
-// responsive component, otherwise height will be 0 and
-// no chart will be rendered.
 
-// const data = data
-
-const PieChart = ({ data /* see data tab */ }) => (
-  <div className="chart-pie">
-    <ResponsivePie
-      data={data}
-      margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
-      innerRadius={0.5}
-      padAngle={0.7}
-      cornerRadius={3}
-      activeOuterRadiusOffset={8}
-      borderWidth={1}
-      borderColor={{ from: "color", modifiers: [["darker", 0.2]] }}
-      arcLinkLabelsSkipAngle={10}
-      arcLinkLabelsTextColor="#333333"
-      arcLinkLabelsThickness={2}
-      arcLinkLabelsColor={{ from: "color" }}
-      arcLabelsSkipAngle={10}
-      arcLabelsTextColor={{ from: "color", modifiers: [["darker", 2]] }}
-      defs={[
-        {
-          id: "dots",
-          type: "patternDots",
-          background: "inherit",
-          color: "rgba(255, 255, 255, 0.3)",
-          size: 4,
-          padding: 1,
-          stagger: true,
-        },
-        {
-          id: "lines",
-          type: "patternLines",
-          background: "inherit",
-          color: "rgba(255, 255, 255, 0.3)",
-          rotation: -45,
-          lineWidth: 6,
-          spacing: 10,
-        },
-      ]}
-      fill={[
-        {
-          match: {
-            id: "ruby",
-          },
-          id: "dots",
-        },
-        {
-          match: {
-            id: "c",
-          },
-          id: "dots",
-        },
-        {
-          match: {
-            id: "go",
-          },
-          id: "dots",
-        },
-        {
-          match: {
-            id: "python",
-          },
-          id: "dots",
-        },
-        {
-          match: {
-            id: "scala",
-          },
-          id: "lines",
-        },
-        {
-          match: {
-            id: "lisp",
-          },
-          id: "lines",
-        },
-        {
-          match: {
-            id: "elixir",
-          },
-          id: "lines",
-        },
-        {
-          match: {
-            id: "javascript",
-          },
-          id: "lines",
-        },
-      ]}
-      legends={[
-        {
-          anchor: "bottom",
-          direction: "row",
-          justify: false,
-          translateX: 0,
-          translateY: 56,
-          itemsSpacing: 0,
-          itemWidth: 100,
-          itemHeight: 18,
-          itemTextColor: "#999",
-          itemDirection: "left-to-right",
-          itemOpacity: 1,
-          symbolSize: 18,
-          symbolShape: "circle",
-          effects: [
+export const PieChart = ({ ...props }) => (
+  <>
+    <div className="styles.card">
+      <div className={`styles.card-header`}>{props.title}</div>
+      <div className={`styles.card-body`}>
+        <ResponsivePie
+          data={props.data}
+          margin={{ top: 20, right: 2, bottom: 20, left: 20 }}
+          innerRadius={0.5}
+          padAngle={0.7}
+          cornerRadius={3}
+          activeOuterRadiusOffset={8}
+          colors={{ scheme: "blues" }}
+          borderWidth={0}
+          arcLinkLabelsSkipAngle={10}
+          arcLinkLabelsTextColor={{ from: "color", modifiers: [["darker", 1]] }}
+          arcLinkLabelsDiagonalLength={12}
+          arcLinkLabelsThickness={2}
+          arcLinkLabelsColor={{ from: "color", modifiers: [["darker", 1]] }}
+          arcLabelsSkipAngle={10}
+          radialLabelsSkipAngle={0}
+          radialLabelsTextXOffset={6}
+          radialLabelsTextColor={{
+            from: "color",
+            modifiers: [["darker", 0.2]],
+          }}
+          radialLabelsLinkOffset={0}
+          radialLabelsLinkDiagonalLength={16}
+          radialLabelsLinkHorizontalLength={24}
+          radialLabelsLinkStrokeWidth={1}
+          radialLabelsLinkColor={{
+            from: "color",
+            modifiers: [["darker", 0.2]],
+          }}
+          slicesLabelsSkipAngle={0}
+          slicesLabelsTextColor={{
+            from: "color",
+            modifiers: [["darker", 0.2]],
+          }}
+          sliceLabel={(d) => <tspan>{d.id}</tspan>}
+          animate={true}
+          motionStiffness={90}
+          motionDamping={15}
+          sortByValue={true}
+          defs={[
             {
-              on: "hover",
-              style: {
-                itemTextColor: "#000",
-              },
+              id: "dots",
+              type: "linearGradient",
+              colors: [
+                { offset: 0, color: "inherit", opacity: 0.1 },
+                { offset: 100, color: "inherit", opacity: 0.1 },
+              ],
             },
-          ],
-        },
-      ]}
-    />
-  </div>
+          ]}
+        />
+      </div>
+      <div className="styles.card-footer p-4 d-flex justify-content-end">
+        <div className="legend align-items-center">
+          <span>Updated </span>
+          <b>{props.updatedTime}</b> mins ago
+        </div>
+      </div>
+    </div>
+  </>
 );

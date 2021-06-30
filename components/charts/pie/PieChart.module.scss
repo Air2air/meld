@@ -1,5 +1,8 @@
 @import "./../../styles/variables.scss";
 
-div.chart-pie {
+.card {
   height: 400px;
+  .card-body {
+    height: 300px;
+  }
 }

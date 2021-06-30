@@ -1,32 +1,32 @@
-module.exports = [
-    {
-      "id": "ruby",
-      "label": "ruby",
-      "value": 178,
-      "color": "hsl(277, 70%, 50%)"
-    },
-    {
-      "id": "javascript",
-      "label": "javascript",
-      "value": 340,
-      "color": "hsl(173, 70%, 50%)"
-    },
-    {
-      "id": "haskell",
-      "label": "haskell",
-      "value": 373,
-      "color": "hsl(329, 70%, 50%)"
-    },
-    {
-      "id": "scala",
-      "label": "scala",
-      "value": 473,
-      "color": "hsl(123, 70%, 50%)"
-    },
-    {
-      "id": "erlang",
-      "label": "erlang",
-      "value": 2,
-      "color": "hsl(313, 70%, 50%)"
-    }
-  ]
+export const data = [
+  {
+    id: "css",
+    label: "css",
+    value: 413,
+    color: "hsl(174, 70%, 50%)"
+  },
+  {
+    id: "make",
+    label: "make",
+    value: 375,
+    color: "hsl(207, 70%, 50%)"
+  },
+  {
+    id: "hack",
+    label: "hack",
+    value: 327,
+    color: "hsl(115, 70%, 50%)"
+  },
+  {
+    id: "c",
+    label: "c",
+    value: 308,
+    color: "hsl(127, 70%, 50%)"
+  },
+  {
+    id: "rust",
+    label: "rust",
+    value: 257,
+    color: "hsl(164, 70%, 50%)"
+  }
+];

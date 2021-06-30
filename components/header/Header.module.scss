@@ -4,8 +4,6 @@ nav.navbar {
   height: $navbar-height;
   .container {
     height: $navbar-height;
-    a.navbar-brand {
-    }
     a.nav-link {
       font-weight: 300;
       letter-spacing: 0.02em;
@@ -17,7 +15,6 @@ nav.navbar {
 
 nav.navbar {
   background: transparentize($color-base, 0.3);
-
 }
 
 nav.navbar {
