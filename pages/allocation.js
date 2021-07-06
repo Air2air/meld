@@ -34,7 +34,6 @@ const data1 = [
   },
 ];
 
-
 const AllocationPage = () => {
   return (
     <>
